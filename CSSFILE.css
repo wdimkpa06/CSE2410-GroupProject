@@ -1,1 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #232323;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.calendar-section, .message-section {
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.calendar-section h2, .message-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.message-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calendar-section, .message-section {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}
