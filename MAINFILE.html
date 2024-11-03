@@ -1,1 +1,44 @@
-# CSE2410-GroupProject
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interoffice Organizer</title>
+    <link rel="stylesheet" href="CSSFILE.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">UNIFY</div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="HtmlRegister.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calendar-section">
+            <h2>Your Calendar</h2>
+            <!-- Embed Google Calendar -->
+            <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        </section>
+
+        <section class="message-section">
+            <h2>Inbox</h2>
+            <div class="message-box">
+                <p>No new messages.</p>
+                <!-- Placeholder for messages; server-side code required for real message handling -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 UNIFY V. 1.1 </p>
+    </footer>
+</body>
+</html>
