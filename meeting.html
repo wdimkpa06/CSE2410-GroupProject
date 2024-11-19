@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Scheduler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="meeting-scheduler">
+        <h2>Schedule a Meeting</h2>
+        <form id="meeting-form">
+            <label for="meeting-title">Meeting Title:</label>
+            <input type="text" id="meeting-title" required aria-label="Meeting Title">
+
+            <label for="participants">Invite Participants:</label>
+            <input type="email" id="participants" placeholder="Enter emails, separated by commas" required aria-label="Participants Email">
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required aria-label="Meeting Date">
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" required aria-label="Meeting Time">
+
+            <label for="recurrence">Recurrence:</label>
+            <select id="recurrence">
+                <option value="none">None</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="bi-monthly">Bi-Monthly</option>
+            </select>
+
+            <button type="submit">Schedule Meeting</button>
+        </form>
+        <div id="confirmation-message"></div>
+    </div>
+   
+    <div id="scheduled-meetings">
+        <h3>Scheduled Meetings</h3>
+        <ul id="meetings-list"></ul>
+    </div>
+
+    <script src="scheduleMeeting.js"></script>
+</body>
+</html>
