@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interoffice Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">UNIFY</div>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-groups">Groups</a></li>
+                <li><a href="#" id="nav-meetings">Meetings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="HtmlRegister.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Calendar Section (initially visible) -->
+        <section class="calendar-section" id="calendar-section">
+            <h2>Your Calendar</h2>
+            <!-- Embed Google Calendar -->
+            <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        </section>
+
+        <!-- Meeting Scheduler Section (initially hidden) -->
+        <section class="meeting-scheduler" id="meeting-scheduler" style="display: none;">
+            <h2>Schedule a Meeting</h2>
+            <form id="meeting-form">
+                <label for="meeting-title">Meeting Title:</label>
+                <input type="text" id="meeting-title" required aria-label="Meeting Title">
+
+                <label for="participants">Invite Participants:</label>
+                <input type="email" id="participants" placeholder="Enter emails, separated by commas" required aria-label="Participants Email">
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" required aria-label="Meeting Date">
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" required aria-label="Meeting Time">
+
+                <label for="recurrence">Recurrence:</label>
+                <select id="recurrence">
+                    <option value="none">None</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="bi-monthly">Bi-Monthly</option>
+                </select>
+
+                <button type="submit">Schedule Meeting</button>
+            </form>
+            <div id="confirmation-message"></div>
+
+            <!-- List of Past Meetings -->
+            <h3>Scheduled Meetings</h3>
+            <ul id="meetings-list"></ul>
+        </section>
+
+        <!-- Message Section -->
+        <section class="message-section">
+            <h2>Inbox</h2>
+            <div class="message-box">
+                <p>No new messages.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 UNIFY V. 1.1 </p>
+    </footer>
+
+    <script src="scheduleMeeting.js"></script>
+</body>
+</html>
