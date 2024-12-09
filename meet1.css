@@ -86,6 +86,16 @@ h2 {
     color: #007BFF;
 }
 
+/* Back to Calendar Button */
+.back-btn {
+    font-size: 18px;
+    color: #007BFF;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
 /* Form Fields */
 #meeting-form label {
     display: block;
@@ -118,11 +128,6 @@ button {
 
 button:hover {
     background-color: #0056b3;
-}
-
-#error-message {
-    color: red;
-    margin-top: 5px;
 }
 
 /* Confirmation Message */
